@@ -19,4 +19,4 @@ if [ $UPDATE == 1 ]; then
     echo "root" > /etc/crontabs/cron.update
 fi
 
-$CROND $CROND_FLAGS
+exec $CROND $CROND_FLAGS
