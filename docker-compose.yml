@@ -1,4 +1,9 @@
 cron:
-  build: .
+  image: eeacms/reportek-cron
+  links:
+  - webapp
   env_file:
   - cron.env
+
+webapp:
+  image: razvan3895/nodeserver
