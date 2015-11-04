@@ -4,6 +4,8 @@ CRONTAB=/etc/crontabs/root
 CROND=/usr/sbin/crond
 CROND_FLAGS="-f"
 
+echo '' > $CRONTAB
+
 for item in `env`
 do
    case "$item" in
