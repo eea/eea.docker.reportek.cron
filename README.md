@@ -39,9 +39,8 @@ Here is a basic example of a `docker-compose.yml` file using the `eeacms/reporte
 
 ### Run it with environment variable set in cron.env
 
-* CRONTASK_1=*/2 * * * * <command>
-* CRONTASK_2=5 * * * * <command>
-
+* CRONTASK=<command>
+* CRONTASK_INTERVAL=*/2 * * * *
 
 ## Copyright and license
 
