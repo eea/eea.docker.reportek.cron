@@ -18,6 +18,5 @@ RUN mkdir -p /etc/chaperone.d
 
 COPY src/chaperone.conf            /etc/chaperone.d/chaperone.conf
 
-USER cronusr
-
 ENTRYPOINT ["/usr/bin/chaperone"]
+CMD ["--user", "cronusr"]
