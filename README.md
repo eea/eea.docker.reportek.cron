@@ -28,19 +28,10 @@ Here is a basic example of a `docker-compose.yml` file using the `eeacms/reporte
 
     cron:
       image: eeacms/reportek-cron
-      links:
-      - webapp
-      env_file:
-      - cron.env
-
-    webapp:
-      image: razvan3895/nodeserver
-
-
-### Run it with environment variable set in cron.env
-
-* CRONTASK=<command>
-* CRONTASK_INTERVAL=*/2 * * * *
+      environment:
+        CRONTAB: |-
+          * * * * * echo 1 minute cron
+          */60 * * * * echo 2 minute cron
 
 ## Copyright and license
 

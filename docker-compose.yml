@@ -1,9 +1,6 @@
 cron:
   image: eeacms/reportek-cron
-  links:
-  - webapp
-  env_file:
-  - cron.env
-
-webapp:
-  image: razvan3895/nodeserver
+  environment:
+    CRONTAB: |-
+      * * * * * echo 1 minute cron
+      */60 * * * * echo 2 minute cron
