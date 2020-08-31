@@ -3,4 +3,4 @@ cron:
   environment:
     CRONTAB: |-
       * * * * * echo 1 minute cron
-      */60 * * * * echo 2 minute cron
+      */2 * * * * echo 2 minute cron
